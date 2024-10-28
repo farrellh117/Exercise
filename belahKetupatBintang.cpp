@@ -7,20 +7,25 @@ int main() {
     cout << "Input lebar belah ketupat: ";
     cin >> lebar_ketupat;
 
-    for (int baris = 0; baris < (lebar_ketupat * 2) - 1; baris++) {
-        for (int spasi_atas = 0; spasi_atas < lebar_ketupat - baris; spasi_atas++) {
+    // Bagian atas belah ketupat
+    for (int baris = 0; baris < lebar_ketupat; baris++) {
+        for (int spasi = 0; spasi < lebar_ketupat - baris; spasi++) {
             cout << " ";
         }
 
-        for (int kolom_atas = 0; kolom <= baris; kolom_atas++) {
+        for (int kolom = 0; kolom <= baris; kolom++) {
             cout << "* ";
         }
+        cout << endl;
+    }
 
-        for (int spasi_bawah = spasi_atas; spasi_bawah < lebar_ketupat - baris; spasi_bawah++) {
+    // Bagian bawah belah ketupat
+    for (int baris = lebar_ketupat - 2; baris >= 0; baris--) {
+        for (int spasi = 0; spasi < lebar_ketupat - baris; spasi++) {
             cout << " ";
         }
 
-        for (int kolom_bawah = kolom_atas; kolom_bawah > 0; kolom_bawah--) {
+        for (int kolom = baris; kolom >= 0; kolom--) {
             cout << "* ";
         }
         cout << endl;
