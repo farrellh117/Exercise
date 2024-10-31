@@ -8,8 +8,8 @@ int main() {
     cin >> tinggi_segitiga;
 
     for (int baris = 1; baris <= tinggi_segitiga; baris++) {
-	    for (int kolom = 1; kolom <= tinggi_segitiga - baris + 1; kolom++) {
-	        cout << kolom << " ";
+	    for (int kolom = 0; kolom <= tinggi_segitiga - baris; kolom++) {
+	        cout << kolom + 1 << " ";
 	    }
 	    cout << endl;
     }
